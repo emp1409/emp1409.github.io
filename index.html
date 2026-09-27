@@ -5,7 +5,8 @@
   </head>
   <body>
     <h1> Hey, welcome to my website! </h1>
-    <h2> Here are some resources I use for one of my events in Science Olympiad, Codebusters C.</h2>
+    <h2> Here are some resources I use for one of my events in Science Olympiad, Codebusters C, and
+    for cryptography-based puzzles as a whole</h2>
 
     <h1> Puzzle Providers and Solvers</h1>
     <h2> <a href="https://www.dcode.fr/en">dcode</a> </h2>
@@ -13,7 +14,7 @@
     cryptii to solve it. dcode can solve most common ciphers and puzzles on the internet, and
     it can even find which cipher you're trying to identify 
     <a href="https://www.dcode.fr/cipher-identifier">here</a>! This isn't really used often
-    in Science Olympiad however, as we most often already have the cipher key.</p>
+    in Science Olympiad however, as we most often already have the means to solve the cipher.</p>
 
     <h2> <a href="https://cryptograms.puzzlebaron.com/play.php">Puzzle Baron</a> </h2>
     <p> I often use this website to help practice for this type of cipher called an 
@@ -25,8 +26,8 @@
 
     <h2> <a href="https://www.scio.ly/">Scio.ly</a> </h2>
     <p> This site I don't recommend as much, but it's still useful for other ciphers,
-    such as a <strong>Checkerboard Cipher</strong><a href="#fn2">2</a> or a 
-    <strong>Fractionated Morse</strong><a href="#fn3">3</a></p>. You can also use it for
+    such as a <strong>Checkerboard Cipher</strong><sup><a href="#fn2">2</a></sup> or a 
+    <strong>Fractionated Morse</strong><sup><a href="#fn3">3</a></sup>. You can also use it for
     other Science Olympiad events, though the answers of the questions it provides can
     often be wrong. </p>
     <br>
@@ -49,6 +50,8 @@
         substitution alphabet and use two letters (or numbers) as the substitution for the 
         plaintext character instead of just one letter. You'll often see the grid's rows and 
         columns correspond to numbers online, but Codebusters uses 5-lettered keywords instead. </p>
+        <p> Note: 5x5 Polybius squares only have 25 squares, 1 short of the 26 seen in the English
+        alphabet. To compensate for this, the letters I and J usually represent the same square.</p>
     <h2 id="fn3">Fractionated Morse Cipher</h2>
         <p>You might've heard of Morse Code and tried to hide a message in it once or twice. As it turns
         out, we can take that message-hiding ability one step further by using a <strong>Fractionated
@@ -56,10 +59,16 @@
         Ciphers use three, now including × as well. × basically serves as white space; one × symbol is
         interpreted as a separation between letters, while two × symbols are interpreted as a space
         between words (in normal morse code this would be akin to /).
-        <a href="https://en.wikipedia.org/wiki/Aristocrat_Cipher">here</a>. </p>
-      
-        
-    </ol>
+        <p> Fractionated Morse acts like a combination of an Aristocrat and Morse Code; the substitution
+        alphabet is shifted through the use of a keyword, and each letter represents a string of three
+        characters (., -, or ×). The ciphertext is replaced with these three characters, and, if you
+        did it correctly, you can convert the substituted morse characters into plaintext (if this didn't
+        make sense you can always look at 
+        <a href="http://www.practicalcryptography.com/ciphers/fractionated-morse-cipher/">this explanation</a>
+         instead.</p>
+    <br>
+
+    <h1> Worked-Out Aristocrat Example </h1>
     
     
   </body>
