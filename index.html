@@ -5,7 +5,7 @@
   </head>
   <body>
     <h1> Hey, welcome to my website! </h1>
-    <h2> Here are some resources I use for one of my events in Science Olympiad, Codebusters C, and
+    <h2> Here is some information and resources I use for one of my events in Science Olympiad, Codebusters C, and
     for cryptography-based puzzles as a whole</h2>
 
     <h1> Puzzle Providers and Solvers</h1>
@@ -21,7 +21,7 @@
       <strong>Aristocrat Cipher</strong><sup><a href="#fn1">1</a></sup>. Usually,
     I try to break these puzzles by looking for patterns in the letters (i.e. if a 
     letter repeats in the third and fifth spot of a 5-letter word it is most likely
-    e). If it does get too hard, you can always just press the <i>Hint me!</i> button
+    e in a word such as "there"). If it does get too hard, you can always just press the <i>Hint me!</i> button
     to see the vowel locations or reload the page to get a different puzzle.</p>
 
     <h2> <a href="https://www.scio.ly/">Scio.ly</a> </h2>
@@ -65,10 +65,45 @@
         did it correctly, you can convert the substituted morse characters into plaintext (if this didn't
         make sense you can always look at 
         <a href="http://www.practicalcryptography.com/ciphers/fractionated-morse-cipher/">this explanation</a>
-         instead.</p>
+         instead).</p>
     <br>
 
     <h1> Worked-Out Aristocrat Example </h1>
+    <h3> You can find more cipher examples like this in the Puzzle Baron site linked above!</h3>
+
+    <p> Let's say, for whatever reason, you encounter an Aristocrat Cipher, and you would like to know
+    what it means. The phrase "sqovmeq g'w stnl v ajmnntu..." doesn't look very readable now, does it?</p>
+    <img src="aristo0.png">
+    <p> How do you even approach something like this?</p>
+    <p> Well, one thing you can do is to look for <i>letter patterns</i>. If we look to the right area of
+    the ciphertext, we can find the strings NLVN, VJHVBE, and NLQPQ. They seem random at first, until you
+    notice how the letters inside them repeat.</p>
+    <img src="aristo1.png">
+    <p> As mentioned above, letters that repeat in the 3rd and 5th letter of a 5-letter word tend to be
+    E, and the 5-letter word in question likely ends in -ere. We can predict that the 2nd letter might be H,
+    but we don't know if the first letter is T or W. Let's look at the other words. 
+    <p> There aren't a lot of 4-letter words <i>that</i> (see what I did there) both start and end with the 
+    same letter, and, given the fact that the frequency of the letter N is high, we can conclude N corresponds
+    to the letter T and that NLVN corresponds to THAT. Using this information, we can also find that NLQPQ is
+    the word THERE (Note: You shouldn't rely on frequencies too much. E, T, and A are the most common letters
+    in the English language, but you might notice that E isn't too common in this cipher (6 occurances only!))
+    </p>
+    <p> As for the VJHVBE string, we can get information from the other words to discern that V is A. What word
+    fits the pattern A__A__?</p>
+    <p> Once we fill out those three words, we can look for the letter substitutions we know and fill those out
+    too.</p>
+    <img src="aristo2.png">
+    <p> Alright, now we have a lot more information to use. Look to the left. Recognize any words?</p>
+    <p> You might not get the first two words, but we can get the last, which is LITTLE. You might also
+    see that the letter C repeats in the pattern ENVUCVPC. We can use this to get the word 
+    STAN<strong>D</strong>AR<strong>D</strong>. We can also use the information that C corresponds to D
+    to get the word FOLLOWED. </p>
+    <img src="aristo4.png">
+    <p> Try it yourself! Now that we filled in most of the letters, can you tell which words the underlined
+    spaces are supposed to represent?</p>
+    <br>
+    <p> After all those steps, we get the final, unencrypted quote: </p>
+    <img src="aristo5.png">
     
     
   </body>
